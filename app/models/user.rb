@@ -1,4 +1,6 @@
 class User < ApplicationRecord
-    has_many :categories
-    has_many :expenses
+    validates :name, presence: true
+
+    has_many :categories, foreign_key:"user_id", dependent: :destroy
+    has_many :expenses, foreign_key:"user_id", dependent: :destroy
 end
