@@ -1,0 +1,19 @@
+<%= form_with(model: @category, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon %>
+    <%= form.select :icon, options_for_select([
+      ['Car', 'https://img.icons8.com/2266EE/color/car'],
+      ['Sport', 'https://img.icons8.com/2266EE/color/sport'],
+      ['Make-up', 'https://img.icons8.com/?size=512&id=FrWKbpynUJrB&format=png']
+    ]) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create Category' %>
+  </div>
+<% end %>
