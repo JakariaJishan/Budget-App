@@ -1,5 +1,16 @@
-category show
-<% @expenses.each do |expense| %>
-    <%= expense.name %>
-<% end %>
-<%= link_to "create expense", new_category_expense_path(@category.id) %>
+<div class="flex flex-col justify-center  h-full">
+  <h2 class="bg-bluish text-white text-center px-4 py-3">categories</h2>
+  <%= @total %>
+  <div class="flex-1 overflow-y-scroll">
+    <div class="flex flex-col justify-center">
+      <% @expenses.each do |expense| %>
+          <h3><%= expense.name %></h3>
+          <p>$<%= expense.amount %></p>
+          <%= button_to "delete", category_expense_path(@category, expense), method: :delete, data:{confirm: "Are you sure you want to delete item?"} %>
+      <% end %>
+    </div>
+  </div>
+  <div class="text-center text-white  ">
+    <%= link_to "Create Expense", new_category_expense_path(@category.id), class:"bg-greenish px-4 py-3 w-full block" %>
+  </div>
+</div>

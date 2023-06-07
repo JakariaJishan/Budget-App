@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "home#index"
   resources :categories do
-    resources :expenses
+    resources :expenses, only:[:new,:create,:destroy]
   end
 
 
