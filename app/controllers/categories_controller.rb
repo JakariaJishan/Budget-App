@@ -1,8 +1,10 @@
 class CategoriesController < ApplicationController
     load_and_authorize_resource
     before_action :authenticate_user!
+
     def index
         @categories = Category.where(user_id:current_user.id)
+        @total_amount = Expense.where(user_id:current_user.id).sum(:amount)
     end
 
     def show
