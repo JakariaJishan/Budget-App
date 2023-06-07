@@ -1,0 +1,5 @@
+category show
+<% @expenses.each do |expense| %>
+    <%= expense.name %>
+<% end %>
+<%= link_to "create expense", new_category_expense_path(@category.id) %>
