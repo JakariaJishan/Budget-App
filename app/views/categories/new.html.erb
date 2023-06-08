@@ -1,19 +1,30 @@
-<%= form_with(model: @category, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, autofocus: true %>
+
+
+<div class="bg-[#3778c2] flex justify-between items-center text-white px-2 py-6">
+       <%= link_to :back do %>
+          <%= image_tag("https://img.icons8.com/ios/50/circled-chevron-left.png", alt: "exit", width: 20, height: 20) %>
+        <% end %>
+      <h3> Add Category </h3>
+      <h3>  </h3>
+</div>
+<div class="px-2 my-5">
+<%= form_with model: @category, local: true  do |form| %>
+  <div class="mb-4">
+    <%= form.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= form.text_field :name, autofocus: true, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
-  <div class="field">
-    <%= form.label :icon %>
+  <div class="mb-4 flex flex-col gap-2">
+    <%= form.label :icon, class: "block text-gray-700 text-sm font-bold mb-2" %>
     <%= form.select :icon, options_for_select([
-      ['Car', 'https://img.icons8.com/2266EE/color/car'],
+      ['🚗Car', 'https://img.icons8.com/2266EE/color/car'],
       ['Sport', 'https://img.icons8.com/2266EE/color/sport'],
       ['Make-up', 'https://img.icons8.com/?size=512&id=FrWKbpynUJrB&format=png']
-    ]) %>
+    ]), {}, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit 'Create Category' %>
+  <div class="flex items-center justify-between">
+    <%= form.submit 'Create', class: "bg-[#5fb523] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full cursor-pointer" %>
   </div>
 <% end %>
+<div>
