@@ -1,14 +1,14 @@
-<div class="flex flex-col justify-center  h-full">
-  <div class="bg-[#3778c2] flex justify-between items-center text-white px-2 py-6">
+<div class="flex flex-col justify-center  h-full bg-white">
+  <div class="bg-[#3778c2] flex justify-between items-center text-white p-4 py-6">
        <%= link_to categories_path do %>
           <%= image_tag("https://img.icons8.com/ios/50/circled-chevron-left.png", alt: "exit", width: 20, height: 20) %>
         <% end %>
-      <h3> Categories </h3>
+      <h3> Transections </h3>
       <h3> <%= button_to category_path(@category), method: :delete, data:{confirm: "Are you sure you want to delete item?"}, class:" opacity-50 hover:opacity-100" do %>
            <%= image_tag("https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png", alt: "exit", width: 20, height: 20) %>
           <% end %> </h3>
   </div>
-    <div class="flex justify-between items-center  border-b border-slate-300 px-2 py-2">
+    <div class="flex justify-between items-center  border-b border-slate-300 p-4 py-2">
     <div class="flex items-center gap-px">
       <img class="w-10 h-10" src="<%= @category.icon %>"/>
       <p>Total</p>
@@ -17,10 +17,10 @@
     </div>
     <%= render '/shared/notice' %>
 
-  <div class="flex-1 overflow-y-scroll no-scrollbar">
+  <div class="flex-1 overflow-y-scroll no-scrollbar ">
     <div class="flex flex-col justify-center gap-y-1">
       <% @expenses.each do |expense| %>
-        <div class="py-3 px-2 flex justify-between items-start border-2 "> 
+        <div class="py-3 p-4 flex justify-between items-start border-2 "> 
           <div>
           <h3 class="flex-1 capitalize"><%= expense.name %></h3>
           <%= button_to category_expense_path(@category, expense), method: :delete, data:{confirm: "Are you sure you want to delete item?"}, class:" mt-2 opacity-50 hover:opacity-100" do %>

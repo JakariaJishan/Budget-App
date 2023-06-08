@@ -2,7 +2,7 @@
 <h2 class="text-2xl text-center font-bold my-4">Sign Up</h2>
 
 <%= render 'shared/notice'%>
-<div class="flex flex-col justify-center px-2">
+<div class="flex flex-col justify-center p-4 bg-white">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
     <div class="mb-4">

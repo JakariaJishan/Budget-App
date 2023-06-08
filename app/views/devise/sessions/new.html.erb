@@ -1,7 +1,7 @@
 <h2 class="text-2xl text-center font-bold my-4">Log in</h2>
 
 <%= render 'shared/notice'%>
-<div class="flex flex-col justify-center px-2">
+<div class="flex flex-col justify-center p-4 bg-white">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "mb-4" }) do |f| %>
     <div class="mb-4">
       <%= f.label :email, class: "block text-gray-700 text-sm font-bold mb-2" %>

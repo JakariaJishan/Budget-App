@@ -6,7 +6,7 @@
       <h3>  </h3>
 </div>
 <%= render '/shared/notice' %>
-<div class="px-2 my-5">
+<div class="p-4 my-5 bg-white">
 <%= form_with model: @expense, url: category_expenses_path(category_id: params[:category_id]), local: true  do |form| %>
   <div class="mb-4">
     <%= form.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
