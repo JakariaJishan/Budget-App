@@ -3,14 +3,14 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @categories = Category.where(user_id: current_user.id)
+    @categories = Category.where(user_id: current_user.id).order(created_at: :desc)
     @total_amount = Expense.where(user_id: current_user.id).sum(:amount)
   end
 
   def show
     @category = Category.find(params[:id])
     @expenses = Expense.joins(:categories_expenses).where(user_id: current_user.id,
-                                                          categories_expenses: { category_id: params[:id] })
+                                                          categories_expenses: { category_id: params[:id] }).order(created_at: :desc)
     @total = @expenses.sum(:amount)
   end
 
