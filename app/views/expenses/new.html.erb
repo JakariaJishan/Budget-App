@@ -5,6 +5,7 @@
       <h3> Add Expense </h3>
       <h3>  </h3>
 </div>
+<%= render '/shared/notice' %>
 <div class="px-2 my-5">
 <%= form_with model: @expense, url: category_expenses_path(category_id: params[:category_id]), local: true  do |form| %>
   <div class="mb-4">

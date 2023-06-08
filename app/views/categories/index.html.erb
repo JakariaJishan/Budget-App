@@ -12,6 +12,8 @@
       <p>Total</p>
       <h3 class="font-bold">$<%= @total_amount %></h3>
     </div>
+    <%= render '/shared/notice' %>
+
   <div class="flex-1 overflow-y-scroll no-scrollbar">
     <div class="flex flex-col justify-center">
       <% @categories.each do |category| %>

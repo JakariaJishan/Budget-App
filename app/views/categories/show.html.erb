@@ -15,6 +15,8 @@
       </div>
       <h3 class="font-bold">$<%= @total %></h3>
     </div>
+    <%= render '/shared/notice' %>
+
   <div class="flex-1 overflow-y-scroll no-scrollbar">
     <div class="flex flex-col justify-center gap-y-1">
       <% @expenses.each do |expense| %>
