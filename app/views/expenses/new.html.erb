@@ -37,7 +37,13 @@
       <%= label_tag "makeup_icon", class: "inline-flex items-center cursor-pointer" do %>
         <%= check_box_tag "expense[icon][]", "https://img.icons8.com/?size=512&id=FrWKbpynUJrB&format=png", false, class: "form-checkbox h-5 w-5 text-indigo-600" %>
         <%= image_tag("https://img.icons8.com/?size=512&id=FrWKbpynUJrB&format=png", alt: "Make-up", width: 20, height: 20, class: "mx-2") %>
-        Make-up
+        Groceries
+      <% end %>
+      <%= form.check_box :icon, { multiple: true, class: "hidden" } %>
+      <%= label_tag "pet_icon", class: "inline-flex items-center cursor-pointer" do %>
+        <%= check_box_tag "expense[icon][]", "https://img.icons8.com/2266EE/color/dog", false, class: "form-checkbox h-5 w-5 text-indigo-600" %>
+        <%= image_tag("https://img.icons8.com/2266EE/color/dog", alt: "Make-up", width: 20, height: 20, class: "mx-2") %>
+        Pet
       <% end %>
   </div>
 
