@@ -9,7 +9,8 @@ RSpec.feature 'Expense', type: :feature do
 
     @category = Category.create(name: Faker::Company.name, icon: Faker::Avatar.image, user: @user)
 
-    @expense = Expense.create(name: Faker::Company.name, amount: Faker::Number.decimal(l_digits: 3, r_digits: 2),author: @user)
+    @expense = Expense.create(name: Faker::Company.name, amount: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+                              author: @user)
 
     CategoriesExpense.create(expense: @expense, category: @category)
 
