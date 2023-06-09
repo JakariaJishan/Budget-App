@@ -3,7 +3,7 @@
           <%= image_tag("https://img.icons8.com/ios/50/long-arrow-left.png", alt: "exit", width: 20, height: 20) %>
           <% end %>
           <h2> LOGIN </h2>
-          <button id="login" class="text-white text-[14px]" onclick="document.getElementById('submit').click()">Next</button>
+          <button id="login" class="text-white text-[14px]" onclick="document.getElementById('submit_1').click()">Next</button>
 
   </div>
 <%= render 'shared/notice'%>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="mb-4">
-      <%= f.submit "Log in", class:"hidden", id:"submit" %>
+      <%= f.submit "Log in", class:"hidden", id:"submit_1" %>
     </div>
   <% end %>
 </div>

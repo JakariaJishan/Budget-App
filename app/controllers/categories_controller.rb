@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.where(user_id: current_user.id).order(created_at: :desc)
-    @total_amount = Category.sum { |category| category.expenses.sum(&:amount) } || 0
+    @total_amount = Expense.where(user_id: current_user.id).sum(:amount)
   end
 
   def show
@@ -31,6 +31,10 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
+    @expenses = Expense.joins(:categories_expenses).where(user_id: current_user.id,
+    categories_expenses: { category_id: params[:id] })
+    @expenses.destroy_all
+
     if @category.destroy
       redirect_to categories_path, notice: 'Category deleted successfully'
     else
