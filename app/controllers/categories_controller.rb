@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.where(user_id: current_user.id).order(created_at: :desc)
-    @total_amount = Expense.where(user_id: current_user.id).sum(:amount)
+    @total_amount = Category.sum { |category| category.expenses.sum(&:amount) } || 0
   end
 
   def show
