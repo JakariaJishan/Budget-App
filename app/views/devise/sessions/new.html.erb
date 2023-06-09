@@ -1,29 +1,28 @@
-<h2 class="text-2xl text-center font-bold my-4">Log in</h2>
+<div class="bg-[#3778c2] flex justify-between items-center text-white p-4 py-6">
+<%= link_to root_path do %>
+          <%= image_tag("https://img.icons8.com/ios/50/long-arrow-left.png", alt: "exit", width: 20, height: 20) %>
+          <% end %>
+          <h2> LOGIN </h2>
+          <button id="login" class="text-white text-[14px]" onclick="document.getElementById('submit').click()">Next</button>
 
+  </div>
 <%= render 'shared/notice'%>
 <div class="flex flex-col justify-center p-4 bg-white">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "mb-4" }) do |f| %>
+ 
+
     <div class="mb-4">
-      <%= f.label :email, class: "block text-gray-700 text-sm font-bold mb-2" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Your Email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full py-2 px-3 text-gray-700 border-transparent focus:border-transparent focus:ring-0 placeholder-[#babfc6]" , placeholder:"Email"%>
+    </div>
+    <hr class="w-full h-1">
+     <%= f.password_field :password, autocomplete: "current-password", class: "w-full py-2 px-3 text-gray-700 border-transparent focus:border-transparent focus:ring-0 placeholder-[#babfc6]", placeholder:"Password" %>
     </div>
 
     <div class="mb-4">
-      <%= f.label :password, class: "block text-gray-700 text-sm font-bold mb-2" %>
-      <%= f.password_field :password, autocomplete: "current-password", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
-    </div>
-
-    <% if devise_mapping.rememberable? %>
-      <div class="mb-4">
-        <%= f.check_box :remember_me, class: "form-checkbox h-4 w-4 text-indigo-600" %>
-        <%= f.label :remember_me, class: "text-gray-700 ml-2" %>
-      </div>
-    <% end %>
-
-    <div class="mb-4">
-      <%= f.submit "Log in", class: "bg-[#5fb523] w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" %>
+      <%= f.submit "Log in", class:"hidden", id:"submit" %>
     </div>
   <% end %>
-
-  <%= render "devise/shared/links" %>
 </div>
+ <div class="text-[#babfc6] hover:text-[#434b54] text-center">
+    <%= render "devise/shared/links" %>
+  </div>
