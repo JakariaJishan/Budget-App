@@ -10,6 +10,7 @@
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
+  - [🚀 Live Demo](#live-demo)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
@@ -59,6 +60,10 @@ Budget App is a Ruby on Rails full-stack web application.
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running follow these simple example steps.
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo](https://budget-buddy-573e.onrender.com/)
 
 ### Prerequisites
 
