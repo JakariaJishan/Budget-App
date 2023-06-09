@@ -151,6 +151,7 @@ If you like this project please give it a star 😁🌟✨
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+- Thanks to Gregoire Vella(original idea). Find original design [here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 Thanks to Microverse for providing us with the right material to aid this project development
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
