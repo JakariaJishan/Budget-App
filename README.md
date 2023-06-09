@@ -10,6 +10,7 @@
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
+  - [🚀 Live Demo](#live-demo)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
@@ -59,6 +60,10 @@ Budget App is a Ruby on Rails full-stack web application.
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running follow these simple example steps.
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo](https://budget-buddy-573e.onrender.com/)
 
 ### Prerequisites
 
@@ -151,6 +156,7 @@ If you like this project please give it a star 😁🌟✨
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+- Thanks to Gregoire Vella(original idea). Find original design [here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 Thanks to Microverse for providing us with the right material to aid this project development
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
