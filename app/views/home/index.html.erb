@@ -1,0 +1,14 @@
+<div class="flex flex-col justify-center text-center h-screen">
+  <h1 class="text-5xl text-[#434B54] font-bold mb-36 font-cursive">Budget Buddy</h1>
+<%= render 'shared/notice'%>
+
+  <div class="flex flex-col items-center">
+    <div class="bg-[#3778c2] hover:bg-[#2c609c] text-white font-bold focus:outline-none focus:shadow-outline w-full">
+      <%= link_to "Log In", 'users/sign_in', class: "py-2 px-4 block" %>
+    </div>
+
+    <div class="hover:bg-[#d7d9db] text-slate-500 font-bold py-2 px-4 focus:outline-none focus:shadow-outline w-full cursor-pointer">
+      <%= link_to "Sign Up", 'users/sign_up', class: "block" %>
+    </div>
+  </div>
+</div>

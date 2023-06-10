@@ -1,0 +1,28 @@
+<div class="bg-[#3778c2] flex justify-between items-center text-white p-4 py-6">
+<%= link_to root_path do %>
+          <%= image_tag("https://img.icons8.com/ios/50/long-arrow-left.png", alt: "exit", width: 20, height: 20) %>
+          <% end %>
+          <h2> LOGIN </h2>
+          <button id="login" class="text-white text-[14px]" onclick="document.getElementById('submit_1').click()">Next</button>
+
+  </div>
+<%= render 'shared/notice'%>
+<div class="flex flex-col justify-center p-4 bg-white">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "mb-4" }) do |f| %>
+ 
+
+    <div class="mb-4">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full py-2 px-3 text-gray-700 border-transparent focus:border-transparent focus:ring-0 placeholder-[#babfc6]" , placeholder:"Email"%>
+    </div>
+    <hr class="w-full h-1">
+     <%= f.password_field :password, autocomplete: "current-password", class: "w-full py-2 px-3 text-gray-700 border-transparent focus:border-transparent focus:ring-0 placeholder-[#babfc6]", placeholder:"Password" %>
+    </div>
+
+    <div class="mb-4">
+      <%= f.submit "Log in", class:"hidden", id:"submit_1" %>
+    </div>
+  <% end %>
+</div>
+ <div class="text-[#babfc6] hover:text-[#434b54] text-center">
+    <%= render "devise/shared/links" %>
+  </div>
